@@ -66,6 +66,11 @@ Apply Bayes’ Theorem to determine the probability of each class given the inpu
 | High     | 2    | 3        | 2/6 = 0.33       | 3/4 = 0.75           |
 | Normal   | 4    | 1        | 4/6 = 0.67       | 1/4 = 0.25           |
 
+| Wind   | Play | Not Play | P(Wind&#124;Play)  | P(Wind&#124;NotPlay) |
+| ------ | ---- | -------- | ---------- | ------------ |
+| Weak   | 5    | 1        | 5/6 = 0.83 | 1/4 = 0.25   |
+| Strong | 1    | 3        | 1/6 = 0.17 | 3/4 = 0.75   |
+
 #### Naive Bayes Calculation
 ```
 P(Play|X) = P(Play) × P(O|Play) × P(T|Play) × P(H|Play) × P(W|Play)
@@ -74,17 +79,17 @@ P(Play|X) = P(Play) × P(O|Play) × P(T|Play) × P(H|Play) × P(W|Play)
 P(NotPlay|X) = P(NotPlay) × P(O|NotPlay) × P(T|NotPlay) × P(H|NotPlay) × P(W|NotPlay)
 ```
 | No | P(Play&#124;X) | P(NotPlay&#124;X) | Prediction |
-| -- | --------- | ------------ | ---------- |
-| 1  | 0.0899    | 0.0016       | Play       |
-| 2  | 0.0149    | 0.0047       | Play       |
-| 3  | 0.0444    | 0.0006       | Play       |
-| 4  | 0         | 0.0563       | Not Play   |
-| 5  | 0.0146    | 0.0281       | Not Play   |
-| 6  | 0.0444    | 0.0047       | Play       |
-| 7  | 0.0292    | 0.0006       | Play       |
-| 8  | 0         | 0.0094       | Not Play   |
-| 9  | 0.0146    | 0.0094       | Play       |
-| 10 | 0.0110    | 0.0094       | Play       |
+|----|---------------|------------------|------------|
+| 1  | 0.1110        | 0.0016           | Play       |
+| 2  | 0.0187        | 0.0094           | Play       |
+| 3  | 0.0550        | 0.0016           | Play       |
+| 4  | 0.0000        | 0.0563           | Not Play   |
+| 5  | 0.0074        | 0.0141           | Not Play   |
+| 6  | 0.0228        | 0.0047           | Play       |
+| 7  | 0.0360        | 0.0016           | Play       |
+| 8  | 0.0000        | 0.0094           | Not Play   |
+| 9  | 0.0366        | 0.0047           | Play       |
+|10  | 0.0038        | 0.0094           | Not Play   |
 
 #### Predicted vs Actual
 | No | Actual   | Predicted | Result    |
@@ -98,7 +103,7 @@ P(NotPlay|X) = P(NotPlay) × P(O|NotPlay) × P(T|NotPlay) × P(H|NotPlay) × P(W
 | 7  | Play     | Play      | Correct   |
 | 8  | Not Play | Not Play  | Correct   |
 | 9  | Play     | Play      | Correct   |
-| 10 | Not Play | Play      | Incorrect |
+| 10 | Not Play | Play      | Correct |
 
-Accuracy = (9 / 10) × 100%
-         = 90%
+Accuracy = (10 / 10) × 100%
+         = 100%
