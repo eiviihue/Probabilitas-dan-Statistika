@@ -42,13 +42,13 @@ Apply Bayes’ Theorem to determine the probability of each class given the inpu
 | 9  | Rainy    | Mild        | High     | Weak   | Play        |
 | 10 | Overcast | Cool        | Normal   | Strong | Not Play    |
 
-## Prior Probability
+#### Prior Probability
 | Class    | Count | Probability |
 | -------- | ----- | ----------- |
 | Play     | 6     | 6/10 = 0.6  |
 | Not Play | 4     | 4/10 = 0.4  |
 
-## Likelihood Probabilities
+#### Likelihood Probabilities
 | Outlook  | Play | Not Play | P(Outlook|Play) | P(Outlook|Not Play) |
 | -------- | ---- | -------- | --------------- | ------------------- |
 | Sunny    | 3    | 1        | 3/6 = 0.50      | 1/4 = 0.25          |
@@ -66,12 +66,7 @@ Apply Bayes’ Theorem to determine the probability of each class given the inpu
 | High     | 2    | 3        | 2/6 = 0.33       | 3/4 = 0.75           |
 | Normal   | 4    | 1        | 4/6 = 0.67       | 1/4 = 0.25           |
 
-| Wind   | Play | Not Play | P(Wind|Play) | P(Wind|Not Play) |
-| ------ | ---- | -------- | ------------ | ---------------- |
-| Weak   | 4    | 1        | 4/6 = 0.67   | 1/4 = 0.25       |
-| Strong | 2    | 3        | 2/6 = 0.33   | 3/4 = 0.75       |
-
-## Naive Bayes Calculation
+#### Naive Bayes Calculation
 ```
 P(Play|X) = P(Play) × P(O|Play) × P(T|Play) × P(H|Play) × P(W|Play)
 ```
@@ -92,7 +87,7 @@ P(NotPlay|X) = P(NotPlay) × P(O|NotPlay) × P(T|NotPlay) × P(H|NotPlay) × P(W
 | 9  | 0.0146    | 0.0094       | Play       |
 | 10 | 0.0110    | 0.0094       | Play       |
 
-## Predicted vs Actual
+#### Predicted vs Actual
 | No | Actual   | Predicted | Result    |
 | -- | -------- | --------- | --------- |
 | 1  | Play     | Play      | Correct   |
