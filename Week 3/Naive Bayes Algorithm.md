@@ -55,13 +55,13 @@ Apply Bayes’ Theorem to determine the probability of each class given the inpu
 | Overcast | 1    | 2        | 1/6 = 0.17      | 2/4 = 0.50          |
 | Rainy    | 2    | 1        | 2/6 = 0.33      | 1/4 = 0.25          |
 
-| Temperature | Play | Not Play | P(Temperature`|`Play) | P(Temperature`|`Not Play) |
+| Temperature | Play | Not Play | P(Temperature&#124;Play) | P(Temperature&#124;Not Play) |
 | ----------- | ---- | -------- | ------------------- | ----------------------- |
 | Hot         | 0    | 2        | 0/6 = 0             | 2/4 = 0.50              |
 | Mild        | 4    | 1        | 4/6 = 0.67          | 1/4 = 0.25              |
 | Cool        | 2    | 1        | 2/6 = 0.33          | 1/4 = 0.25              |
 
-| Humidity | Play | Not Play | P(Humidity`|`Play) | P(Humidity`|`Not Play) |
+| Humidity | Play | Not Play | P(Humidity&#124;Play) | P(Humidity&#124;Not Play) |
 | -------- | ---- | -------- | ---------------- | -------------------- |
 | High     | 2    | 3        | 2/6 = 0.33       | 3/4 = 0.75           |
 | Normal   | 4    | 1        | 4/6 = 0.67       | 1/4 = 0.25           |
@@ -74,7 +74,7 @@ P(Play|X) = P(Play) × P(O|Play) × P(T|Play) × P(H|Play) × P(W|Play)
 P(NotPlay|X) = P(NotPlay) × P(O|NotPlay) × P(T|NotPlay) × P(H|NotPlay) × P(W|NotPlay)
 ```
 <br>
-| No | P(Play`|`X) | P(NotPlay`|`X) | Prediction |
+| No | P(Play&#124;X) | P(NotPlay&#124;X) | Prediction |
 | -- | --------- | ------------ | ---------- |
 | 1  | 0.0899    | 0.0016       | Play       |
 | 2  | 0.0149    | 0.0047       | Play       |
