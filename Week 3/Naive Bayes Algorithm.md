@@ -49,7 +49,7 @@ Apply Bayes’ Theorem to determine the probability of each class given the inpu
 | Not Play | 4     | 4/10 = 0.4  |
 
 #### Likelihood Probabilities
-| Outlook  | Play | Not Play | P(Outlook`|`Play) | P(Outlook`|`Not Play) |
+| Outlook  | Play | Not Play | P(Outlook&#124;Play) | P(Outlook&#124;Not Play) |
 | -------- | ---- | -------- | --------------- | ------------------- |
 | Sunny    | 3    | 1        | 3/6 = 0.50      | 1/4 = 0.25          |
 | Overcast | 1    | 2        | 1/6 = 0.17      | 2/4 = 0.50          |
