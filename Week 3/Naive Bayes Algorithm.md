@@ -1,4 +1,4 @@
-# Kelompok 4
+# Group 4
 | Name           | NRP        |
 | ---            | ---        |
 | Andie Azril Alfrianto | 5025241054 |
@@ -6,7 +6,7 @@
 | Farras Nizar | 5025241143 |
 | Rafi Aqila Maulana | 5025241165 |
 
-### Teori Bayes
+### Bayes' Theorem
 Bayes’ Theorem is a probability theory used to determine the probability of an event based on prior knowledge or existing evidence.
 ```
 P(A|B) = (P(B|A) * P(A)) / P(B)
