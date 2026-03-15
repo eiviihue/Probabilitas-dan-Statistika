@@ -41,26 +41,26 @@ Apply Bayes’ Theorem to determine the probability of each class given the inpu
 | 8  | Sunny    | Hot         | High     | Weak   | Not Play    |
 | 9  | Rainy    | Mild        | High     | Weak   | Play        |
 | 10 | Overcast | Cool        | Normal   | Strong | Not Play    |
-
+<br>
 #### Prior Probability
 | Class    | Count | Probability |
 | -------- | ----- | ----------- |
 | Play     | 6     | 6/10 = 0.6  |
 | Not Play | 4     | 4/10 = 0.4  |
-
+<br>
 #### Likelihood Probabilities
 | Outlook  | Play | Not Play | P(Outlook|Play) | P(Outlook|Not Play) |
 | -------- | ---- | -------- | --------------- | ------------------- |
 | Sunny    | 3    | 1        | 3/6 = 0.50      | 1/4 = 0.25          |
 | Overcast | 1    | 2        | 1/6 = 0.17      | 2/4 = 0.50          |
 | Rainy    | 2    | 1        | 2/6 = 0.33      | 1/4 = 0.25          |
-
+<br>
 | Temperature | Play | Not Play | P(Temperature|Play) | P(Temperature|Not Play) |
 | ----------- | ---- | -------- | ------------------- | ----------------------- |
 | Hot         | 0    | 2        | 0/6 = 0             | 2/4 = 0.50              |
 | Mild        | 4    | 1        | 4/6 = 0.67          | 1/4 = 0.25              |
 | Cool        | 2    | 1        | 2/6 = 0.33          | 1/4 = 0.25              |
-
+<br>
 | Humidity | Play | Not Play | P(Humidity|Play) | P(Humidity|Not Play) |
 | -------- | ---- | -------- | ---------------- | -------------------- |
 | High     | 2    | 3        | 2/6 = 0.33       | 3/4 = 0.75           |
@@ -73,7 +73,7 @@ P(Play|X) = P(Play) × P(O|Play) × P(T|Play) × P(H|Play) × P(W|Play)
 ```
 P(NotPlay|X) = P(NotPlay) × P(O|NotPlay) × P(T|NotPlay) × P(H|NotPlay) × P(W|NotPlay)
 ```
-
+<br>
 | No | P(Play|X) | P(NotPlay|X) | Prediction |
 | -- | --------- | ------------ | ---------- |
 | 1  | 0.0899    | 0.0016       | Play       |
