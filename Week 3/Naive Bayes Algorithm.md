@@ -27,3 +27,84 @@ Determine the probability of each feature appearing in each class.
 3. Calculate Posterior Probability
 Apply Bayes’ Theorem to determine the probability of each class given the input data.
 4. The class with the highest probability is chosen as the prediction result.
+
+### Dataset
+| No | Outlook  | Temperature | Humidity | Wind   | Play Soccer |
+| -- | -------- | ----------- | -------- | ------ | ----------- |
+| 1  | Sunny    | Mild        | Normal   | Weak   | Play        |
+| 2  | Overcast | Mild        | High     | Weak   | Play        |
+| 3  | Sunny    | Cool        | Normal   | Weak   | Play        |
+| 4  | Overcast | Hot         | High     | Strong | Not Play    |
+| 5  | Rainy    | Mild        | High     | Strong | Not Play    |
+| 6  | Sunny    | Mild        | Normal   | Strong | Play        |
+| 7  | Rainy    | Cool        | Normal   | Weak   | Play        |
+| 8  | Sunny    | Hot         | High     | Weak   | Not Play    |
+| 9  | Rainy    | Mild        | High     | Weak   | Play        |
+| 10 | Overcast | Cool        | Normal   | Strong | Not Play    |
+
+##Prior Probability
+| Class    | Count | Probability |
+| -------- | ----- | ----------- |
+| Play     | 6     | 6/10 = 0.6  |
+| Not Play | 4     | 4/10 = 0.4  |
+
+##Likelihood Probabilities
+| Outlook  | Play | Not Play | P(Outlook|Play) | P(Outlook|Not Play) |
+| -------- | ---- | -------- | --------------- | ------------------- |
+| Sunny    | 3    | 1        | 3/6 = 0.50      | 1/4 = 0.25          |
+| Overcast | 1    | 2        | 1/6 = 0.17      | 2/4 = 0.50          |
+| Rainy    | 2    | 1        | 2/6 = 0.33      | 1/4 = 0.25          |
+
+| Temperature | Play | Not Play | P(Temperature|Play) | P(Temperature|Not Play) |
+| ----------- | ---- | -------- | ------------------- | ----------------------- |
+| Hot         | 0    | 2        | 0/6 = 0             | 2/4 = 0.50              |
+| Mild        | 4    | 1        | 4/6 = 0.67          | 1/4 = 0.25              |
+| Cool        | 2    | 1        | 2/6 = 0.33          | 1/4 = 0.25              |
+
+| Humidity | Play | Not Play | P(Humidity|Play) | P(Humidity|Not Play) |
+| -------- | ---- | -------- | ---------------- | -------------------- |
+| High     | 2    | 3        | 2/6 = 0.33       | 3/4 = 0.75           |
+| Normal   | 4    | 1        | 4/6 = 0.67       | 1/4 = 0.25           |
+
+| Wind   | Play | Not Play | P(Wind|Play) | P(Wind|Not Play) |
+| ------ | ---- | -------- | ------------ | ---------------- |
+| Weak   | 4    | 1        | 4/6 = 0.67   | 1/4 = 0.25       |
+| Strong | 2    | 3        | 2/6 = 0.33   | 3/4 = 0.75       |
+
+##Naive Bayes Calculation
+```
+P(Play|X) = P(Play) × P(O|Play) × P(T|Play) × P(H|Play) × P(W|Play)
+```
+```
+P(NotPlay|X) = P(NotPlay) × P(O|NotPlay) × P(T|NotPlay) × P(H|NotPlay) × P(W|NotPlay)
+```
+
+| No | P(Play|X) | P(NotPlay|X) | Prediction |
+| -- | --------- | ------------ | ---------- |
+| 1  | 0.0899    | 0.0016       | Play       |
+| 2  | 0.0149    | 0.0047       | Play       |
+| 3  | 0.0444    | 0.0006       | Play       |
+| 4  | 0         | 0.0563       | Not Play   |
+| 5  | 0.0146    | 0.0281       | Not Play   |
+| 6  | 0.0444    | 0.0047       | Play       |
+| 7  | 0.0292    | 0.0006       | Play       |
+| 8  | 0         | 0.0094       | Not Play   |
+| 9  | 0.0146    | 0.0094       | Play       |
+| 10 | 0.0110    | 0.0094       | Play       |
+
+##Predicted vs Actual
+| No | Actual   | Predicted | Result    |
+| -- | -------- | --------- | --------- |
+| 1  | Play     | Play      | Correct   |
+| 2  | Play     | Play      | Correct   |
+| 3  | Play     | Play      | Correct   |
+| 4  | Not Play | Not Play  | Correct   |
+| 5  | Not Play | Not Play  | Correct   |
+| 6  | Play     | Play      | Correct   |
+| 7  | Play     | Play      | Correct   |
+| 8  | Not Play | Not Play  | Correct   |
+| 9  | Play     | Play      | Correct   |
+| 10 | Not Play | Play      | Incorrect |
+
+Accuracy = (9 / 10) × 100%
+         = 90%
