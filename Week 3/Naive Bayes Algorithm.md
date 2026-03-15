@@ -9,7 +9,9 @@
 ### Teori Bayes
 Bayes’ Theorem is a probability theory used to determine the probability of an event based on prior knowledge or existing evidence.
 ```
-P(A|B)=\frac{P(B|A)P(A)}{P(B)}
+P(A|B) = P(B|A)P(A)
+         ----------
+            P(B)
 ```
 Explanation:
 P(A|B) : Probability of event A given that B occurs
