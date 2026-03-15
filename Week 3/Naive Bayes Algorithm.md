@@ -11,7 +11,7 @@ Bayes’ Theorem is a probability theory used to determine the probability of an
 ```
 P(A|B) = (P(B|A) * P(A)) / P(B)
 ```
-Explanation:
+Explanation:<br>
 P(A|B) : Probability of event A given that B occurs<br>
 P(B|A) : Probability of event B given that A occurs<br>
 P(A) : Prior probability of A<br>
