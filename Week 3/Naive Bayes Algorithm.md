@@ -73,7 +73,6 @@ P(Play|X) = P(Play) × P(O|Play) × P(T|Play) × P(H|Play) × P(W|Play)
 ```
 P(NotPlay|X) = P(NotPlay) × P(O|NotPlay) × P(T|NotPlay) × P(H|NotPlay) × P(W|NotPlay)
 ```
-<br>
 | No | P(Play&#124;X) | P(NotPlay&#124;X) | Prediction |
 | -- | --------- | ------------ | ---------- |
 | 1  | 0.0899    | 0.0016       | Play       |
